@@ -21,7 +21,7 @@ add_selectbox = st.sidebar.selectbox(
 
 # Datos de ejemplo
 personas = ['Lobiño', 'Chicho', 'Alexis', 'Ri','Marco']
-puntuaciones = [0.5, 0.5, 0.5, 0.5,5]
+puntuaciones = [0.5, 0.5, 0.5, 0.5,20]
 emojis = ['👶🏿🍊🍽️', '🤵🍺', '💩', '😎🍊','🚴']
 
 # Crear el gráfico de barras
