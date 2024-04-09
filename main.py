@@ -67,6 +67,8 @@ for nombre in df['nombre'].unique():
         y=df_temp['apuesta'],
         mode='lines+markers',  # Include lines along with markers
         name=nombre,
+        marker=dict(size=8, opacity=0.8),  # Adjust marker size and opacity
+        line=dict(width=2),  # Adjust line width
         hovertemplate=partido  # Define the tooltip content
     ))
 
