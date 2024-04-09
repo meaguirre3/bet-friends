@@ -60,15 +60,13 @@ fig = go.Figure()
 #    df_temp = df[df['nombre'] == nombre]
 #    fig.add_trace(go.Scatter(x=df_temp['fecha'], y=df_temp['apuesta'], mode='lines+markers', name=nombre))
 for index, row in df.iterrows():
-
     fig.add_trace(go.Scatter(
-        x=row['fecha'],
-        y=row['apuesta'],
+        x=[row['fecha']],  # Wrap the value in a list to ensure compatibility with Plotly
+        y=[row['apuesta']],  # Wrap the value in a list to ensure compatibility with Plotly
         mode='lines+markers',
         name=row['nombre'],
-        hovertemplate=row['partido']  # Define the tooltip content
+        hovertemplate=f"Fecha: {row['fecha']}<br>Apuesta: {row['apuesta']}"  # Define the tooltip content
     ))
-
 
 # Configurar el diseño del gráfico
 fig.update_layout(
