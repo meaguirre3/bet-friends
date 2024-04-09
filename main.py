@@ -29,6 +29,7 @@ fig = go.Figure()
 
 for persona, punt, emoji in zip(personas, puntuaciones, emojis):
     fig.add_trace(go.Bar(x=[persona], y=[punt], text=emoji, textposition='auto', name=persona))
+    
 
 # Configuración del diseño
 fig.update_layout(
@@ -55,9 +56,19 @@ df['fecha'] = pd.to_datetime(df['fecha'])
 fig = go.Figure()
 
 # Iterar sobre cada nombre único y agregar una línea para cada uno
-for nombre in df['nombre'].unique():
-    df_temp = df[df['nombre'] == nombre]
-    fig.add_trace(go.Scatter(x=df_temp['fecha'], y=df_temp['apuesta'], mode='lines+markers', name=nombre))
+#for nombre in df['nombre'].unique():
+#    df_temp = df[df['nombre'] == nombre]
+#    fig.add_trace(go.Scatter(x=df_temp['fecha'], y=df_temp['apuesta'], mode='lines+markers', name=nombre))
+for index, row in df.iterrows():
+
+    fig.add_trace(go.Scatter(
+        x=row['fecha'],
+        y=row['apuesta'],
+        mode='lines+markers',
+        name=row['nombre'],
+        hovertemplate=row['partido']  # Define the tooltip content
+    ))
+
 
 # Configurar el diseño del gráfico
 fig.update_layout(
