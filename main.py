@@ -9,14 +9,14 @@ from datetime import datetime, timedelta
 st.title('💵 Bet Friends :sunglasses:')
 st.text('Pagina para recordar las apuestas')
 # Agregar un widget en la barra lateral
-st.sidebar.header('Menu')
+#st.sidebar.header('Menu')
 
 
 # Using object notation
-add_selectbox = st.sidebar.selectbox(
-    "Select",
-    ("Historial", "Apuesta Actual")
-)
+#add_selectbox = st.sidebar.selectbox(
+#    "Select",
+#    ("Historial", "Apuesta Actual")
+#)
 
 
 # Datos de ejemplo
