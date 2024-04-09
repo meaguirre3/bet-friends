@@ -63,7 +63,7 @@ for nombre in df['nombre'].unique():
     df_temp = df[df['nombre'] == nombre]
     partido = df_temp['partido']
     fig.add_trace(go.Scatter(
-        x=df_temp['fecha'],
+        x=df_temp['fecha'].dt.strftime('%Y-%m-%d'),
         y=df_temp['apuesta'],
         mode='lines+markers',  # Include lines along with markers
         name=nombre,
