@@ -20,9 +20,9 @@ st.text('Pagina para recordar las apuestas')
 
 
 # Datos de ejemplo
-personas = ['Lobiño', 'Chicho', 'Alexis', 'Ri','Marco']
-puntuaciones = [0.5, 0.5, 0.5, 0.5,20]
-emojis = ['👶🏿🍊🍽️', '🤵🍺', '💩', '😎🍊','🚴']
+personas = ['Lobiño', 'Pacha','Chicho', 'Alexis', 'Ri','Marco']
+puntuaciones = [0.5,20 ,0.5, 0.5, 0.5,20]
+emojis = ['👶🏿🍊🍽️','🍺⚽', '🤵🍺', '💩', '😎🍊','🚴']
 
 # Crear el gráfico de barras
 fig = go.Figure()
