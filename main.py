@@ -81,6 +81,7 @@ fig.update_layout(
 )
 
 # Mostrar el gráfico en Streamlit
+st.text('Acumulado')
 st.plotly_chart(fig)
 
 def get_deudas():
@@ -96,6 +97,6 @@ def get_deudas():
                     y=['Lobiño', 'Pacha','Chicho', 'Alexis', 'Ri','Marco'],
                     text_auto=True)
     fig.update_xaxes(side="top")
-    st.plotly_chart(fig, theme="streamlit")
+    st.plotly_chart(fig, theme=None)
 
 get_deudas()
