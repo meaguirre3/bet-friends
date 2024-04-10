@@ -100,7 +100,8 @@ def get_deudas():
     fig.update_layout(
     title="Acumulado Pagar ")
     st.plotly_chart(fig, theme=None)
-    
+
+get_deudas()
 def get_tabla():
     df = pd.read_csv('history.csv')
     fig = go.Figure(data=[go.Table(
@@ -110,5 +111,5 @@ def get_tabla():
     cells=dict(values=list(df.values),
                fill_color='lavender',
                align='left'))])
-
-get_deudas()
+st.plotly_chart(fig)
+get_tabla()
