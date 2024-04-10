@@ -106,10 +106,8 @@ def get_tabla():
     df = pd.read_csv('history.csv')
     fig = go.Figure(data=[go.Table(
     header=dict(values=list(df.columns),
-                fill_color='paleturquoise',
                 align='left'),
     cells=dict(values=list(df.values),
-               fill_color='lavender',
                align='left'))])
     st.plotly_chart(fig)
 get_tabla()
