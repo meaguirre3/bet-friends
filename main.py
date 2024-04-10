@@ -93,8 +93,8 @@ def get_deudas():
          [0, 0, 0, 0, 0,0]]
     fig = px.imshow(data,
                     x=['Lobiño', 'Pacha','Chicho', 'Alexis', 'Ri','Marco'],
-                    y=['Lobiño', 'Pacha','Chicho', 'Alexis', 'Ri','Marco']
-                    text=data,)
+                    y=['Lobiño', 'Pacha','Chicho', 'Alexis', 'Ri','Marco'],
+                    text=data)
     fig.update_xaxes(side="top")
     st.plotly_chart(fig, theme="streamlit")
 
