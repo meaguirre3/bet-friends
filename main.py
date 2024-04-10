@@ -1,5 +1,6 @@
 import streamlit as st
 import plotly.graph_objects as go
+import plotly.express as px
 import numpy as np
 import pandas as pd
 import random
@@ -85,7 +86,6 @@ fig.update_layout(
 st.plotly_chart(fig)
 
 def get_deudas():
-    import plotly.express as px
     data=[[0, 20, 0, 0, 0,20], 
           [0, 0, 0, 0, 0,0], 
           [0, 0, 0, 0, 0,0],
@@ -100,5 +100,15 @@ def get_deudas():
     fig.update_layout(
     title="Acumulado Pagar ")
     st.plotly_chart(fig, theme=None)
+    
+def get_tabla():
+    df = pd.read_csv('history.csv')
+    fig = go.Figure(data=[go.Table(
+    header=dict(values=list(df.columns),
+                fill_color='paleturquoise',
+                align='left'),
+    cells=dict(values=list(df.values),
+               fill_color='lavender',
+               align='left'))])
 
 get_deudas()
