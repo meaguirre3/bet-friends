@@ -103,11 +103,12 @@ def get_deudas():
 
 get_deudas()
 def get_tabla():
+    #fecha	partido	nombre	apuesta	equipo
     df = pd.read_csv('history.csv')
     fig = go.Figure(data=[go.Table(
     header=dict(values=list(df.columns),
                 align='left'),
-    cells=dict(values=df.values,
+    cells=dict(values=[df.fecha.values,df.partido.values,df.nombre.values,df.apuesta.values,df.equipo.values],
                align='left'))])
     st.plotly_chart(fig)
 get_tabla()
