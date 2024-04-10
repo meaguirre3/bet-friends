@@ -107,7 +107,7 @@ def get_tabla():
     fig = go.Figure(data=[go.Table(
     header=dict(values=list(df.columns),
                 align='left'),
-    cells=dict(values=list(df.values),
+    cells=dict(values=df.values,
                align='left'))])
     st.plotly_chart(fig)
 get_tabla()
