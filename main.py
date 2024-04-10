@@ -83,25 +83,19 @@ fig.update_layout(
 # Mostrar el gráfico en Streamlit
 st.plotly_chart(fig)
 
-def get_chart_12486592():
+def get_deudas():
     import plotly.express as px
-    data=[[0, 0, 0, 0, 0,0], 
+    data=[[0, 20, 0, 0, 0,10], 
           [0, 0, 0, 0, 0,0], 
           [0, 0, 0, 0, 0,0],
          [0, 0, 0, 0, 0,0],
          [0, 0, 0, 0, 0,0],
          [0, 0, 0, 0, 0,0]]
     fig = px.imshow(data,
-                    labels=dict(x="Day of Week", y="Time of Day", color="Productivity"),
                     x=['Lobiño', 'Pacha','Chicho', 'Alexis', 'Ri','Marco'],
                     y=['Lobiño', 'Pacha','Chicho', 'Alexis', 'Ri','Marco']
                    )
     fig.update_xaxes(side="top")
+    st.plotly_chart(fig, theme="streamlit")
 
-    tab1, tab2 = st.tabs(["Streamlit theme (default)", "Plotly native theme"])
-    with tab1:
-        st.plotly_chart(fig, theme="streamlit")
-    with tab2:
-        st.plotly_chart(fig, theme=None)
-
-get_chart_12486592()
+get_deudas()
