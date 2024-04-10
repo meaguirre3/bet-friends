@@ -91,13 +91,13 @@ data = [
 ]
 
 # Plotly figure
-fig = px.imshow(data,
+fig2 = px.imshow(data,
                 labels=dict(x="Day of Week", y="Time of Day", color="Productivity"),
                 x=['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
                 y=['Morning', 'Afternoon', 'Evening']
                )
-fig.update_xaxes(side="top")
+fig2.update_xaxes(side="top")
 
 # Display in Streamlit
-st.plotly_chart(fig)
+st.plotly_chart(fig2)
 
