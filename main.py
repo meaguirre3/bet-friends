@@ -86,12 +86,12 @@ st.plotly_chart(fig)
 
 def get_deudas():
     import plotly.express as px
-    data=[[0, 20, 0, 0, 0,10], 
+    data=[[0, 20, 0, 0, 0,20], 
           [0, 0, 0, 0, 0,0], 
           [0, 0, 0, 0, 0,0],
          [0, 0, 0, 0, 0,0],
          [0, 0, 0, 0, 0,0],
-         [0, 0, 0, 0, 0,0]]
+         [10, 0, 0, 0, 0,0]]
     fig = px.imshow(data,
                     x=['Lobiño', 'Pacha','Chicho', 'Alexis', 'Ri','Marco'],
                     y=['Lobiño', 'Pacha','Chicho', 'Alexis', 'Ri','Marco'],
