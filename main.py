@@ -111,5 +111,5 @@ def get_tabla():
     cells=dict(values=list(df.values),
                fill_color='lavender',
                align='left'))])
-st.plotly_chart(fig)
+    st.plotly_chart(fig)
 get_tabla()
