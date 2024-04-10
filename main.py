@@ -94,7 +94,7 @@ def get_deudas():
     fig = px.imshow(data,
                     x=['Lobiño', 'Pacha','Chicho', 'Alexis', 'Ri','Marco'],
                     y=['Lobiño', 'Pacha','Chicho', 'Alexis', 'Ri','Marco']
-                   )
+                    text=data,)
     fig.update_xaxes(side="top")
     st.plotly_chart(fig, theme="streamlit")
 
