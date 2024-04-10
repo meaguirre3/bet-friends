@@ -98,7 +98,7 @@ def get_deudas():
                     text_auto=True)
     fig.update_xaxes(side="top")
     fig.update_layout(
-    title="Acumulado")
+    title="Acumulado Pagar ")
     st.plotly_chart(fig, theme=None)
 
 get_deudas()
